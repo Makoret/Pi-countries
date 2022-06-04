@@ -1,9 +1,6 @@
 const { DataTypes } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
-  // defino el modelo
-  sequelize.define('Country', {
+  sequelize.define('Vacation', {
     id: {
       type: DataTypes.UUID,
       allowNull: false,
@@ -14,29 +11,17 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID,
       allowNull: false
     },
-    image: {
+    challenge: {
       type: DataTypes.UUID,
       allowNull: false
     },
-    continent: {
+    duration: {
       type: DataTypes.UUID,
       allowNull: false
     },
-    capital: {
+    season: {//  (Verano, Otoño, Invierno o Primavera)
       type: DataTypes.UUID,
       allowNull: false
     },
-    subregion: {
-      type: DataTypes.UUID,
-      allowNull: false
-    },
-    area: {
-      type: DataTypes.UUID,
-      allowNull: false
-    },
-    population: {
-      type: DataTypes.UUID,
-      allowNull: false
-    },
-  });
-};
+  })
+}
